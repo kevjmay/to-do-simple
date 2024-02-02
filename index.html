@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-D0</title>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <h1>Simple To-Do List:</h1>
+
+    <!-- Overall card-like container -->
+    <div class="container">
+        <!-- left-side area where projects are displayed -->
+        <div class="projectPane">
+            <!-- The text bar and button to add in a new project -->
+            <div class="newProjectAdd">
+                <input class="addTaskInput" type="text" placeholder="Add new project">
+                <button class="addTaskButton">+</button>
+            </div>
+            <br>
+            <!-- The projects lists display -->
+            <div class="projectList">
+                <ul>
+                    <li>Project One</li>
+                    <li>Project Two</li>
+                    <li>Project Three</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- right-side area where tasks inside projects are displayed -->
+        <div class="taskPane">
+            <h2 class="activeProjectName">Project One</h2>
+            <ul class="activeProjectTasks">
+                <li>Project One</li>
+                <li>Project Two</li>
+                <li>Project Three</li>
+                <li>Project Four</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

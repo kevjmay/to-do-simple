@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: block;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* dotted back-ground pattern */
+    --dot-bg: white;
+    --dot-color: black;
+    --dot-size: 1px;
+    --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+/* Styles for the main card container */
+
+.container {
+    height: 50vh;
+    width: 50vw;
+    background-color: #EBEBEB;
+    border-radius: 14px;
+    border: 2px solid #B3B3B3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+/* Styles for the Project Pane */
+
+.projectPane {
+    background-color: #B3B3B3;
+    border-radius: 12px 12px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taskPane {
+    background-color: #EBEBEB;
+    border-radius: 0px 12px 12px 0px;
+}
+
+.newProjectAdd {
+    display: flex;
+    margin: 2vh;
+}
+
+.newProjectAdd {
+    background-color: #EBEBEB;
+    padding: 0.25vh;
+    border-radius: 12px;
+}
+
+.newProjectAdd input[type=text] {
+    border: none;
+    background-color: #EBEBEB;
+    border-radius: 8px 0px 0px 8px;
+    height: 2.5vh;
+    width: 10vw;
+    padding-left: 5px;
+}
+
+.addTaskButton {
+    border: none;
+    background-color: #B3B3B3;
+    border-radius: 12px;
+    height: 2.5vh;
+    width: 2.25vw;
+}
+
+.addTaskButton:hover {
+    background-color: #A3A3A3;
+}
+
+.projectList {
+    background-color: #EBEBEB;
+    border-radius: 12px;
+    width: 12.5vw;
+}
+
+.projectList ul {
+    list-style: none;
+    padding: 1vh;
+}
+
+.projectList li {
+    line-height: 1.5rem;
+    padding-left: 5px;
+}
+
+li:hover {
+    background-color: #D9D9D9;
+    border-radius: 8px;
+}
+
+/* Styles for the Task Pane */
+
+h2 {
+    margin: 5vh;
+    font-size: 2.5rem;
+}
+
+.activeProjectTasks {
+    list-style: none;
+    margin: 5%;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.activeProjectTasks li {
+    padding-left: 2.5vh;
+} 
+
+

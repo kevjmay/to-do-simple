@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _newProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./newProject */ \"./src/newProject.js\");\n\n// import '..assests/';\n\n\nconsole.log('Hello World! From the main file!')\n\n;(0,_newProject__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n\n\n//# sourceURL=webpack://to-do-simple/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _newProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./newProject */ \"./src/newProject.js\");\n\n\n\nconsole.log('Hello World! From the main file!')\n\n;(0,_newProject__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n\n\n//# sourceURL=webpack://to-do-simple/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconsole.log('Hello World! From the project file!')\n\nfunction newProject(name) {\n    return {\n        id : Date.now().toString(),\n        name : name,\n        tasks : []\n    }\n}\n\nconst project = new newProject('projectOne');\nconsole.log(project)\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (newProject);\n\n\n//# sourceURL=webpack://to-do-simple/./src/newProject.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconsole.log('Hello World! From the project file!')\n\nconst addProject = document.querySelector('.projectForm');\nconst projectInput = document.querySelector('.addTaskInput');\n\naddProject.addEventListener('submit', e => {\n    e.preventDefault()\n    const input = projectInput.value\n    console.log('The form is connected!')\n    if (input.value == null || input.value === '') return\n    const inputs = createProject(input)\n})\n\nfunction newProject(name) {\n    return {\n        id : Date.now().toString(),\n        name : name,\n        tasks : []\n    }\n}\n\nconst project = new newProject('projectOne');\nconsole.log(project)\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (newProject);\n\n\n//# sourceURL=webpack://to-do-simple/./src/newProject.js?");
 
 /***/ })
 

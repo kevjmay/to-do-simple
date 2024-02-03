@@ -83,11 +83,32 @@ h1 {
     border: none;
     background-color: #B3B3B3;
     border-radius: 12px;
-    height: 2.5vh;
+    height: 2vh;
     width: 2.25vw;
 }
 
 .addProjectButton:hover {
+    background-color: #A3A3A3;
+}
+
+.projectButtonSpace {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.deleteButton {
+    /* display: flex;
+    justify-content: flex-end; */
+    border: none;
+    background-color: #B3B3B3;
+    border-radius: 12px;
+    height: 2.5vh;
+    width: 4vw;
+    margin: 3px;
+}
+
+.deleteButton:hover {
     background-color: #A3A3A3;
 }
 
@@ -110,6 +131,10 @@ h1 {
 li:hover {
     background-color: #D9D9D9;
     border-radius: 8px;
+}
+
+.active-list {
+    font-weight: bolder;
 }
 
 /* Styles for the Task Pane */

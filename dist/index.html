@@ -15,18 +15,22 @@
         <div class="projectPane">
             <!-- The text bar and button to add in a new project -->
             <div class="newProjectAdd">
-                <form action="" class="projectForm">
-                    <input class="addProjectInput" type="text" placeholder="Add new project">
+                <form action="" class="projectForm" data-new-list-form>
+                    <input class="addProjectInput" 
+                           type="text"
+                           data-new-list-input 
+                           placeholder="Add new project"
+                           aria-label="Add new project">
                     <button class="addProjectButton">+</button>
                 </form>
             </div>
             <br>
             <!-- The projects lists display -->
             <div class="projectList">
-                <ul>
-                    <li>Project One</li>
+                <ul project-list>
+                    <!-- <li>Project One</li>
                     <li>Project Two</li>
-                    <li>Project Three</li>
+                    <li>Project Three</li> -->
                 </ul>
             </div>
         </div>
@@ -41,8 +45,8 @@
                 <li>Project Four</li>
             </ul>
             <div class="taskButtons">
-                <button class="addTaskButton">Add Task</button>
                 <button class="removeTaskButton">Remove Task</button>
+                <button class="addTaskButton">Add Task</button>
             </div>
         </div>
     </div>

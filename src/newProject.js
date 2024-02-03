@@ -1,25 +1,38 @@
-console.log('Hello World! From the project file!')
+import clearElement from "./clearProject";
+import createList from "./createList";
 
-const addProject = document.querySelector('.projectForm');
-const projectInput = document.querySelector('.addTaskInput');
+const projectList = document.querySelector('[project-list]');
+const newListForm = document.querySelector('[data-new-list-form]')
+const newListInput = document.querySelector('[data-new-list-input]')
 
-addProject.addEventListener('submit', e => {
+
+let lists = [{id: 1, 
+              name: 'First Project'
+             }, 
+             {id: 2, 
+              name:'Second Project'
+             }]
+
+newListForm.addEventListener('submit', e => {
     e.preventDefault()
-    const input = projectInput.value
-    console.log('The form is connected!')
-    if (input.value == null || input.value === '') return
-    const inputs = newProject(input)
+    const listName = newListInput.value
+    if (listName == null || listName === '') return
+    const list = createList(listName)
+    newListInput.value = null
+    lists.push(list)
+    render()
 })
 
-function newProject(name) {
-    return {
-        id : Date.now().toString(),
-        name : name,
-        tasks : []
-    }
+function render() {
+    clearElement(projectList)
+    lists.forEach(list => {
+        const listElement = document.createElement('li')
+        listElement.dataset.listId = list.id
+        listElement.classList.add('list-name')
+        listElement.innerText = list.name
+        projectList.appendChild(listElement)
+    })
 }
 
-const project = new newProject('projectOne');
-console.log(project)
+export default render
 
-export default newProject

@@ -1,7 +1,7 @@
 import './styles.css';
-import newProject from './newProject';
+import render from './newProject';
 
 console.log('Hello World! From the main file!')
 
-newProject();
+render();
 

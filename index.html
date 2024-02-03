@@ -39,17 +39,24 @@
         </div>
 
         <!-- right-side area where tasks inside projects are displayed -->
-        <div class="taskPane">
-            <h2 class="activeProjectName">Project One</h2>
-            <ul class="activeProjectTasks">
+        <div class="taskPane" data-list-display-container>
+            <h2 class="activeProjectName" data-list-title>Project One</h2>
+            <ul class="activeProjectTasks" data-tasks>
                 <li>Project One</li>
                 <li>Project Two</li>
                 <li>Project Three</li>
                 <li>Project Four</li>
             </ul>
             <div class="taskButtons">
-                <button class="removeTaskButton">Remove Task</button>
-                <button class="addTaskButton">Add Task</button>
+                <div class="taskButtonsDisplay">
+                    <form action="" data-new-task-form>
+                        <input type="text"
+                               data-new-task-input
+                               placeholder="Add new task">
+                        <button class="removeTaskButton" data-clear-complete-tasks-button>-</button>
+                        <button class="addTaskButton">+</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
